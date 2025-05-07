@@ -1,0 +1,21 @@
+import tkinter as tk
+
+def mostrar_mensaje():
+    nombre = entrada_nombre.get()
+    edad = entrada_edad.get()
+    mensaje = f"Hola {nombre}, tienes {edad} años."
+    etiqueta_mensaje.config(text=mensaje)
+ventana = tk.Tk()
+ventana.title("Programa con Tkinter")
+tk.Label(ventana, text="Nombre:").pack()
+entrada_nombre = tk.Entry(ventana)
+entrada_nombre.pack()
+tk.Label(ventana, text="Edad:").pack()
+entrada_edad = tk.Entry(ventana)
+entrada_edad.pack()
+boton = tk.Button(ventana, text="Mostrar mensaje", command=mostrar_mensaje)
+boton.pack()
+etiqueta_mensaje = tk.Label(ventana, text="")
+etiqueta_mensaje.pack()
+ventana.mainloop()
+
