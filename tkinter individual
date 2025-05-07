@@ -6,7 +6,9 @@ def mostrar_mensaje():
     mensaje = f"Hola {nombre}, tienes {edad} años."
     etiqueta_mensaje.config(text=mensaje)
 ventana = tk.Tk()
-ventana.title("Programa con Tkinter")
+ventana.title("mi 1ra app grafica")
+ventana.geometry("500x250")
+ventana.config(bg="verde pastel")
 tk.Label(ventana, text="Nombre:").pack()
 entrada_nombre = tk.Entry(ventana)
 entrada_nombre.pack()
